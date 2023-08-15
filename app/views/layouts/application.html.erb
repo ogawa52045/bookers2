@@ -13,6 +13,9 @@
   <header>
     <% if user_signed_in? %>
      <li>
+       <%= link_to "Home", user_path(current_user.id) %>
+     </li>
+     <li>
        <%= link_to 'New Book', new_book_path %>
      </li>
      <li>
