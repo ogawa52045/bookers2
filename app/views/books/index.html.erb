@@ -1,11 +1,1 @@
-<% @books.each do |book| %>
-
-<div>
-  <p>投稿ユーザー画像：<%= image_tag 'no_image.png' %></p>
-  <span>
-    <%= link_to book.title, "/books/#{book.id}" %>
-  </span>
-  <p>Opinion:<%= book.body %></p>
-</div>
-
-<% end %>
+<%= render 'list', books: @books %>
