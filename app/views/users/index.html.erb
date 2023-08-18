@@ -1,3 +1,6 @@
+<div class = "flash_message">
+ <%= flash[:notice] %>
+</div>
 <% @users.each do |user| %>
  <div>
    <p>Image<%= image_tag user.get_profile_image(100, 100) %></p>
