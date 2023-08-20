@@ -2,23 +2,23 @@
 <html>
   <head>
     <title>Bookers2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
-　　
+
 　　<script src="https://kit.fontawesome.com/98ef09a9a3.js" crossorigin="anonymous"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
+  <body>
   <header>
     <nav class= "navbar navbar-expand-lg navbar-dark bg-dark">
      <div class="container">
          <a class="navbar-brand" href="/">
              <span>Bookers</span>
          </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
              <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -80,9 +80,11 @@
      </div>
     </nav>
   </header>
-
+  
   <body>
-　 <%= yield %>
+   <% if user_signed_in? %>
+   <% end %>
+   <%= yield %>
   </body>
   
   <footer>
@@ -94,4 +96,5 @@
       </div>
     </div>
   </footer>
+  </body>
 </html>
