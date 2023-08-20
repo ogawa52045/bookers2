@@ -11,10 +11,15 @@ class ApplicationController < ActionController::Base
       user_path(current_user.id)
      end
    end
+   
+   def after_sign_out_path_for(resource)
+     flash[:notice]= 'Signed out successfully.'
+     root_path
+   end
   
   protected
   
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email])
   end
 end
