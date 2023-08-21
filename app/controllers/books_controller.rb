@@ -9,7 +9,8 @@ class BooksController < ApplicationController
     if @book.save
      redirect_to books_path, notice: 'You have created book successfully.'
     else
-      render :new
+     @books = Book.all
+     render :index
     end
   end
 

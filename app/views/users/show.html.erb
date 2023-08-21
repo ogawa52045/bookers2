@@ -24,8 +24,9 @@
           </a>
         </div>
     </div>
-  </div>
+    <div class="col-md-8 offset-md-1">
+      <%= render 'books/list', books: @books %>
+    </div>
+      </div>
 </div>
 
-
-<%= render 'books/list', books: @books %>
