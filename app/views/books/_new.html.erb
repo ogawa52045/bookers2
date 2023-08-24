@@ -2,12 +2,12 @@
  
  <%= form_with model: @book, url: books_path, method: :post do |f| %>
   <div class="form-group">
-    <%= f.label :title, "Title" %><br>
-    <%= f.text_field :title %>
+    <label for="title">Title</label>
+    <input class="form-control book_title" type="text" name="book[title]" id="book_title">
   </div>
   <div class="form-group">
-    <%= f.label :body, "Opinion" %><br>
-    <%= f.text_area :body %>
+    <label for="body">Opinion</label>
+    <textarea class="form-control book_body" name="book[body]" id="book_body" ></textarea>
   </div>
   <div class="actions">
     <%= f.submit "Create Book", class: "btn btn-success" %>

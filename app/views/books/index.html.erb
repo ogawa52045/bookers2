@@ -1,14 +1,14 @@
 <div class = "flash_message">
  <%= flash.now[:notice] %>
 </div>
-<% if @book.errors.any? %>
+　<% if @book.errors.any? %>
   <h4><%= @book.errors.count %>errors prohibited this obj from being saved:</h4>
   <ul>
    <% @book.errors.full_messages.each do |message| %>
     <li><%= message %></li>
    <% end %>
   </ul>
- <% end %>
+ 　<% end %>
 
 <div class="container px-5 px-sm-0">
   <div class="row">

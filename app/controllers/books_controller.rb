@@ -21,11 +21,11 @@ class BooksController < ApplicationController
     @user = current_user
     @books = Book.all
     @book = Book.new
-    @book = Book.create
   end
 
   def show
     @book = Book.find(params[:id])
+    @user = current_user
   end
   
   def destroy
