@@ -17,4 +17,15 @@ class User < ApplicationRecord
   
   validates :name, presence: true, uniqueness: true, length: { in: 2..20 }
   validates :introduction, length: { maximum: 50 }
+  
+  def first_sign_in?
+   if sign_in_count == 1
+ 
+    return true
+  else
+    # サインイン回数が1以外の場合、初回サインインではない
+    return false
+  end
+end
+
 end
