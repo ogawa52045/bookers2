@@ -1,6 +1,3 @@
-<div class = "flash_message">
- <%= flash.now[:notice] %>
-</div>
 　<% if @book.errors.any? %>
   <h4><%= @book.errors.count %>errors prohibited this obj from being saved:</h4>
   <ul>
@@ -16,6 +13,8 @@
     <%= render 'users/user_info', user: @user %>
     <%= render 'new', book: @book %>
   </div>
+  <div class="col-md-8 offset-md-1">
   <%= render 'list', books: @books %>
+  </div>
   </div>
 </div>
